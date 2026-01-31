@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalpvruksh 2.0 | Silver Oak University</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both',
+              'shimmer': 'shimmer 2.5s linear infinite',
+            },
+            keyframes: {
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
+              }
+            },
+          },
+        },
+      }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .glass-nav { background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(16px); }
+        .text-gradient { background: linear-gradient(to right, #f97316, #facc15); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .schedule-card { background: linear-gradient(145deg, #0a0a0a, #050505); border-left: 4px solid #f97316; }
+    </style>
+</head>
+
+<body class="bg-[#030303] text-slate-300 font-sans selection:bg-orange-500/30 overflow-x-hidden">
+
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5">
+    <div class="max-w-7xl mx-auto p-5 md:p-6 flex justify-between items-center">
+        <div class="text-xl font-black italic tracking-tighter">
+            KALPVRUKSH <span class="text-orange-500 italic">2.0</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <a href="#about" class="hover:text-white transition-all">About</a>
+            <a href="#schedule" class="hover:text-white transition-all">Schedule</a>
+            <a href="#register" class="text-white border-b border-orange-500 pb-1">Register Now</a>
+        </div>
+    </div>
+</nav>
+
+<header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+    <div class="absolute w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-orange-600/5 blur-[120px] rounded-full -z-10 animate-pulse"></div>
+    
+    <div class="animate-fade-up">
+        <p class="text-orange-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6">Silver Oak University</p>
+        <h1 class="text-6xl md:text-[140px] font-black tracking-tighter leading-none mb-8">
+            INNOVATE.<br>
+            <span class="text-gradient uppercase italic">Collaborate.</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12">
+            A multidisciplinary platform designed to encourage innovation and build real-world technical skills among students from all academic backgrounds.
+        </p>
+    </div>
+</header>
+
+<section id="about" class="py-32 max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+            <h2 class="text-4xl font-black text-white uppercase italic tracking-tighter decoration-orange-600 underline decoration-4">The Vision</h2>
+            <p class="text-slate-400 text-lg leading-relaxed">
+                Kalpvruksh is open to all students of the university and provides a platform to participate in competitions, workshops, and expert talks. These activities help students apply classroom knowledge to practical situations.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-white/5">
+                    <h4 class="text-white font-black uppercase text-xs mb-2">Technical Skills</h4>
+                    <p class="text-slate-500 text-xs">Bridge the gap between theory and industry technology.</p>
+                </div>
+                <div class="p-6 bg-[#0a0a0a] rounded-2xl border border-white/5">
+                    <h4 class="text-white font-black uppercase text-xs mb-2">Real-world Exposure</h4>
+                    <p class="text-slate-500 text-xs">Work with peers on real-world ideas and projects.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient-to-br from-orange-600/20 to-transparent p-12 rounded-[3rem] border border-orange-500/10 flex flex-col justify-center">
+            <h3 class="text-2xl font-black text-white mb-6 uppercase">Why Join?</h3>
+            <ul class="space-y-4 text-slate-400 font-medium">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-orange-500"></i> Gain certificates for your academic profile.</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-orange-500"></i> Participate in interactive expert sessions.</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-orange-500"></i> Build valuable problem-solving networks.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="schedule" class="py-32 max-w-7xl mx-auto px-6 bg-[#050505] border-y border-white/5">
+    <h2 class="text-3xl font-black text-white text-center mb-20 uppercase tracking-[0.2em]">Conclave Schedule</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="schedule-card p-10 rounded-2xl group hover:border-white transition-all">
+            <p class="text-orange-500 font-black text-xs mb-2">DAY 01 | FEB 25, 2026</p>
+            <h3 class="text-xl font-bold text-white mb-6 uppercase">Commencement</h3>
+            <ul class="space-y-4 text-xs font-bold text-slate-500">
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Inaugural Ceremony</span> <span>10:00 AM</span></li>
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Multidisciplinary Talk</span> <span>01:00 PM</span></li>
+                <li class="flex justify-between pb-2 text-white"><span>Networking Mixer</span> <span>04:00 PM</span></li>
+            </ul>
+        </div>
+        <div class="schedule-card p-10 rounded-2xl group hover:border-white transition-all">
+            <p class="text-orange-500 font-black text-xs mb-2">DAY 02 | FEB 26, 2026</p>
+            <h3 class="text-xl font-bold text-white mb-6 uppercase">Innovation</h3>
+            <ul class="space-y-4 text-xs font-bold text-slate-500">
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Hands-on Workshops</span> <span>11:00 AM</span></li>
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Paper Presentations</span> <span>02:30 PM</span></li>
+                <li class="flex justify-between pb-2 text-white"><span>Technical Competitions</span> <span>04:30 PM</span></li>
+            </ul>
+        </div>
+        <div class="schedule-card p-10 rounded-2xl group hover:border-white transition-all">
+            <p class="text-orange-500 font-black text-xs mb-2">DAY 03 | FEB 27, 2026</p>
+            <h3 class="text-xl font-bold text-white mb-6 uppercase">The Harvest</h3>
+            <ul class="space-y-4 text-xs font-bold text-slate-500">
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Project Showcase</span> <span>10:30 AM</span></li>
+                <li class="flex justify-between border-b border-white/5 pb-2"><span>Awards Ceremony</span> <span>02:00 PM</span></li>
+                <li class="flex justify-between pb-2 text-white"><span>Cultural Finale</span> <span>05:30 PM</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="register" class="py-32 max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-4xl font-black text-white mb-6 uppercase tracking-tighter italic">Apply Now</h2>
+            <p class="text-slate-500 text-sm mb-10">Secure your academic certificates and exposure by registering before the deadline.</p>
+            <form class="space-y-4">
+                <input type="text" placeholder="Full Name" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-orange-500 text-white text-sm">
+                <input type="email" placeholder="SOU Student Email" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-orange-500 text-white text-sm">
+                <button type="button" class="w-full bg-white text-black font-black py-4 rounded-xl hover:bg-orange-500 hover:text-white transition-all uppercase tracking-widest text-xs">Confirm Participation</button>
+            </form>
+        </div>
+        <div class="p-8 bg-[#0a0a0a] rounded-3xl border border-white/5 text-center">
+            <i class="fa-solid fa-location-dot text-4xl text-orange-600 mb-6"></i>
+            <h4 class="text-xl font-black text-white mb-2 uppercase">Venue Details</h4>
+            <p class="text-slate-500 text-xs leading-relaxed uppercase tracking-widest">
+                Main Campus Grounds,<br> Silver Oak University,<br> Ahmedabad, Gujarat
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 border-t border-white/5 bg-[#010101] text-center">
+    <p class="text-[10px] font-black uppercase tracking-[1em] text-slate-500">Urvish © 2026 | Silver Oak University</p>
+</footer>
+
+</body>
+</html>
